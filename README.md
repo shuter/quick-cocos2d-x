@@ -1,3 +1,12 @@
+
+为了制作小包，特意给 quick-cocos2d-x 2.2.5plus 增加了模块化编译能力。
+
+当禁用所有可选扩展后，libgame.so 的体积缩小到了惊人的 2780212 字节，压缩到 apk 后仅占 1100321 字节（也就是 1M 多一点点）。
+
+然后创建新项目，并修改 proj.android/jni/Application.mk 中的宏定义来禁用可选模块（特定宏设置为 0 即可禁用该模块）。
+
+========
+
 quick-cocos2d-x 是 cocos2d-x 开发商“[触控科技](http://www.chukong-inc.com/)”专门针对 Lua 开发者推出的扩展版本。
 
 Quick-Cocos2d-x 基于 Cocos2d-x 开发，具有 Cocos2d-x 的所有优点。并在 Cocos2d-x 基础上添加了 Lua 脚本支持，和高级脚本框架。让开发商可以用更低的成本、更高的开发效率、更省的人力成本创造高品质手游产品。
